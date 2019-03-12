@@ -185,5 +185,5 @@ podTemplate(cloud:'openshift',label: 'selenium',
 		}	
 	 
 	}
-  }
+  
 }	
