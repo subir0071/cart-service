@@ -112,7 +112,7 @@ podTemplate(cloud:'openshift',label: 'selenium',
 		
 	    stage('Security Scanning')
 	   {
-		  sh 'mvn spotbugs:check'  // findbugs:findbugs
+		  sh 'mvn spotbugs:check -X'  // findbugs:findbugs
 	
 	   }
 		
