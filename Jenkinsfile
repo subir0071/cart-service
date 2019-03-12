@@ -110,7 +110,12 @@ podTemplate(cloud:'openshift',label: 'selenium',
 		   sh 'mvn clean compile'
 	   }
 		
-	   
+	    stage('Security Scanning')
+	   {
+		  sh 'mvn spotbugs:check'  // findbugs:findbugs
+	
+	   }
+		
 	   stage('Code Quality Analysis')
 	   {
 		   sh 'mvn sonar:sonar -Dsonar.host.url="${SONAR_HOST_URL}"'
@@ -126,11 +131,6 @@ podTemplate(cloud:'openshift',label: 'selenium',
 		sh 'mvn package'
 		jacoco(deltaBranchCoverage: '10', deltaClassCoverage: '10', deltaComplexityCoverage: '10', deltaInstructionCoverage: '10', deltaLineCoverage: '10', deltaMethodCoverage: '20')
 	   }
-
-	   stage('Security Scanning')
-	   {
-		  sh 'mvn spotbugs:check'  // findbugs:findbugs
-
 
 	   stage('Dev - Build Application')
 	   {
