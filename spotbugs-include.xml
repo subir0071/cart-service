@@ -1,6 +1,6 @@
 
 <FindBugsFilter>
   <Match>
-    <Rank value="1" />
+    <Rank value="0" />
   </Match>
 </FindBugsFilter>
