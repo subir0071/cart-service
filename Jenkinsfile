@@ -111,10 +111,10 @@ podTemplate(cloud:'openshift',label: 'selenium',
 	   }
 		
 	   }
-	   stage('Code Quality Analysis')
+	  /* stage('Code Quality Analysis')
 	   {
 		   sh 'mvn sonar:sonar -Dsonar.host.url="${SONAR_HOST_URL}"'
-	   }
+	   } */
 
 	   stage('Unit Testing')
 	   {
