@@ -1,0 +1,5 @@
+APP_NAME: demo
+MS_NAME: cart-service
+BRANCH: master
+GIT_SOURCE_URL: https://github.com/subir0071/cart-service.git
+SONAR_HOST_URL: http://sonar-demo-cicd.52.172.12.252.nip.io
